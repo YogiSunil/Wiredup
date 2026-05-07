@@ -46,3 +46,8 @@ Which files changed and why?
 - Evidence:
 	- Screenshot path: evidence/screenshots/context7-github-users-endpoint.png
 	- Transcript/log excerpt: "Context7 endpoint reference avoided guessing field names and prevented incorrect assumptions about not-found behavior."
+
+## Feature Validation Screenshots
+
+- App run screenshot: evidence/screenshots/app-run-octocat.png
+- Test pass screenshot: evidence/screenshots/tests-pass.png
