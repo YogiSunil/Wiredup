@@ -20,25 +20,25 @@ This project demonstrates:
 
 ### V1.0 - Configuration and Live Docs
 
-- [ ] Configure at least 2 protocol servers
-- [ ] Build a feature that uses a third-party library API
-- [ ] Capture evidence of live docs queries
-- [ ] Fill evidence/live-docs-usage.md
-- [ ] Add, commit, and push
+- [x] Configure at least 2 protocol servers
+- [x] Build a feature that uses a third-party library API
+- [x] Capture evidence of live docs queries
+- [x] Fill evidence/live-docs-usage.md
+- [x] Add, commit, and push
 
 ### V1.1 - Second Integration
 
-- [ ] Use second protocol server in real development
-- [ ] Document workflow impact in this README and evidence docs
-- [ ] Add, commit, and push
+- [x] Use second protocol server in real development
+- [x] Document workflow impact in this README and evidence docs
+- [x] Add, commit, and push
 
 ### V1.2 - Hallucination Comparison and Polish
 
-- [ ] Compare output with vs without live docs for the same API call
-- [ ] Fill evidence/hallucination-comparison.md side-by-side
-- [ ] Complete feature with test-first workflow
-- [ ] Add architecture notes/design doc links
-- [ ] Add, commit, and push
+- [x] Compare output with vs without live docs for the same API call
+- [x] Fill evidence/hallucination-comparison.md side-by-side
+- [x] Complete feature with test-first workflow
+- [x] Add architecture notes/design doc links
+- [x] Add, commit, and push
 
 ## Implemented Feature (Step 1)
 
@@ -70,9 +70,23 @@ pytest -q
 6. docs: add hallucination comparison with and without live docs
 7. docs: polish readme summary and next steps
 
+## Architecture Notes
+
+- Data flow: CLI input -> GitHub helper -> API call -> normalized output.
+- Reliability strategy: explicit timeout, 404 handling, and generic 4xx/5xx fallback reduce runtime surprises.
+- Verification strategy: unit tests plus live-doc evidence and hallucination comparison docs.
+
+Design references:
+- `src/github_helper.py`
+- `src/app.py`
+- `tests/test_github_helper.py`
+- `tests/test_app.py`
+- `evidence/live-docs-usage.md`
+- `evidence/hallucination-comparison.md`
+
 ## Summary (to complete before submission)
 
-- Servers used:
-- How they changed workflow:
-- Biggest reduction in hallucination risk:
-- Next improvements:
+- Servers used: Context7 and Chrome MCP.
+- How they changed workflow: Context7 provided authoritative API behavior before coding, and Chrome MCP remains available for UI/browser verification tasks.
+- Biggest reduction in hallucination risk: Live docs prevented incorrect assumptions about requests timeout/exception handling and GitHub users endpoint response behavior.
+- Next improvements: Add a third MCP integration (database or custom tool), improve comparison coverage with additional no-doc vs with-doc scenarios, and expand automated tests.
