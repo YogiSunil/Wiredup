@@ -12,8 +12,8 @@ This project demonstrates:
 
 ## Protocol Servers
 
-- [ ] Context7 (required)
-- [ ] Second server (choose one): Chrome MCP, database connector, or custom MCP server
+- [x] Context7 (required)
+- [x] Second server: Chrome MCP
 - [ ] Optional third server (stretch)
 
 ## Project Checklist
@@ -40,12 +40,25 @@ This project demonstrates:
 - [ ] Add architecture notes/design doc links
 - [ ] Add, commit, and push
 
-## Feature Idea (Fastest Path)
+## Implemented Feature (Step 1)
 
-Build a small API helper command that:
-- reads a package name and function name
-- fetches authoritative usage guidance via live docs
-- generates grounded code snippets with citations to docs lookup results
+Build a small GitHub profile helper command that:
+- accepts a GitHub username
+- calls GitHub REST API with `requests`
+- prints a normalized profile summary
+- returns safe error messages for not-found and network-failure cases
+
+Run it:
+
+```bash
+python -m src.app octocat
+```
+
+Run tests:
+
+```bash
+pytest -q
+```
 
 ## Suggested Commit Sequence
 
