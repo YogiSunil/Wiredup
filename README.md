@@ -8,7 +8,7 @@ This project demonstrates:
 - 2+ protocol server integrations
 - live documentation usage during feature work
 - side-by-side hallucination comparison
-- test-first implementation of a real feature
+- tested implementation of a real feature
 
 ## Protocol Servers
 
@@ -36,7 +36,7 @@ This project demonstrates:
 
 - [x] Compare output with vs without live docs for the same API call
 - [x] Fill evidence/hallucination-comparison.md side-by-side
-- [x] Complete feature with test-first workflow
+- [x] Complete feature with tests implemented and passing
 - [x] Add architecture notes/design doc links
 - [x] Add, commit, and push
 

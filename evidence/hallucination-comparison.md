@@ -24,7 +24,7 @@ Use the same prompt/API task in two conditions:
 
 ## Evidence
 
-- Screenshot without live docs: Not captured during coding session (reconstructed from notes in this file).
+- Screenshot without live docs: evidence/screenshots/no-live-docs-github-helper-draft.png
 - Screenshot with live docs: evidence/screenshots/context7-github-404-behavior.png
 - Supporting transcript/log snippets:
 	- "Without docs: tentative mapping and no clear 404 strategy."

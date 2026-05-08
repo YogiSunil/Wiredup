@@ -47,6 +47,16 @@ Which files changed and why?
 	- Screenshot path: evidence/screenshots/context7-github-users-endpoint.png
 	- Transcript/log excerpt: "Context7 endpoint reference avoided guessing field names and prevented incorrect assumptions about not-found behavior."
 
+### Entry 3
+
+- Task: Verify GitHub users endpoint field names in a browser-driven integration step.
+- Live Docs Query: "Chrome MCP open https://api.github.com/users/octocat and validate response keys used by the helper."
+- Result Used: Confirmed that `login`, `name`, `public_repos`, `followers`, `following`, and `html_url` are present in live response payload.
+- Code Change: No additional code changes were required; this step validated existing mapping behavior in [wiredup/src/github_helper.py](wiredup/src/github_helper.py).
+- Evidence:
+	- Screenshot path: evidence/screenshots/chrome-mcp-github-field-check.png
+	- Transcript/log excerpt: "Browser-side API response inspection matched the fields consumed by the CLI formatter."
+
 ## Feature Validation Screenshots
 
 - App run screenshot: evidence/screenshots/app-run-octocat.png
